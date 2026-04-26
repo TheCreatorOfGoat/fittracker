@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 font-sans;
+    @apply dark:bg-gray-950 dark:text-gray-100;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-2xl shadow-sm border border-gray-100;
+    @apply dark:bg-gray-900 dark:border-gray-800;
+  }
+  .btn-primary {
+    @apply bg-green-500 hover:bg-green-600 text-white font-medium px-4 py-2 rounded-xl transition-all duration-200 active:scale-95;
+  }
+  .btn-secondary {
+    @apply bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium px-4 py-2 rounded-xl transition-all duration-200 active:scale-95;
+    @apply dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700;
+  }
+  .btn-ghost {
+    @apply hover:bg-gray-100 text-gray-600 font-medium px-3 py-2 rounded-xl transition-all duration-200;
+    @apply dark:hover:bg-gray-800 dark:text-gray-300;
+  }
+  .input {
+    @apply w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm outline-none;
+    @apply focus:border-green-400 focus:ring-2 focus:ring-green-100;
+    @apply dark:bg-gray-800 dark:border-gray-700 dark:text-gray-100;
+    @apply placeholder:text-gray-400 transition-all duration-200;
+  }
+  .badge {
+    @apply inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium;
+  }
+  .page-title {
+    @apply font-display text-2xl font-bold text-gray-900 dark:text-gray-100;
+  }
+  .section-title {
+    @apply text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider;
+  }
+}
+
+/* Force dark mode permanent */
+html { color-scheme: dark; }
